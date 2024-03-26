@@ -332,21 +332,21 @@ body {
   position: absolute;
   left: 0;
 }
-.bg-menu__icon::before {
-  top: -1rem;
-}
-.bg-menu__icon::before.is-open {
+.bg-menu__icon.is-open::before {
   z-index: 100;
   top: 0;
   transform: rotate(225deg);
 }
-.bg-menu__icon::after {
-  top: 1rem;
+.bg-menu__icon::before {
+  top: -1rem;
 }
-.bg-menu__icon::after.is-open {
+.bg-menu__icon.is-open::after {
   z-index: 100;
   top: 0;
   transform: rotate(-225deg);
+}
+.bg-menu__icon::after {
+  top: 1rem;
 }
 
 .delete-btn {
@@ -874,10 +874,11 @@ body {
 }
 .header__mb-personal__icon-container {
   background-color: var(--white);
+  position: relative;
 }
 .header__mb-personal__icon {
   color: var(--main-color);
-  font-size: var(--default-font-size);
+  font-size: var(--serif-tertiary-heading-size);
 }
 .header__mb-personal__info {
   font-size: var(--quinary-heading-size);
@@ -996,6 +997,7 @@ body {
   position: fixed;
   top: 10rem;
   z-index: 10;
+  transform: translate(-100%);
   transition: transform 0.4s;
 }
 .mb-navigation.is-open {
@@ -1106,6 +1108,17 @@ body {
   .about-us {
     padding: var(--md-size) 7rem;
   }
+  .about-us__container {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: initial;
+    gap: 3rem;
+  }
+  .about-us__text-container {
+    margin-top: 0;
+  }
 }
 .about-us__image {
   border: 2px solid var(--main-color);
@@ -1118,17 +1131,6 @@ body {
 }
 .about-us__text-container {
   margin-top: var(--sm-size);
-}
-.about-us__container {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: initial;
-  gap: 3rem;
-}
-.about-us__text-container {
-  margin-top: 0;
 }
 
 .events {
@@ -1571,6 +1573,9 @@ body {
   padding: var(--md-size);
   background-image: linear-gradient(135deg, var(--lightgreen), var(--main-color));
 }
+.newsletter__image {
+  display: none;
+}
 @media only screen and (min-width: 75em) {
   .newsletter {
     padding: var(--bg-size);
@@ -1610,11 +1615,6 @@ body {
 @media only screen and (min-width: 56.25em) and (min-width: 75em) {
   .newsletter__container {
     height: 35rem;
-  }
-}
-@media only screen and (min-width: 56.25em) {
-  .newsletter__image {
-    display: none;
   }
 }
 @media only screen and (min-width: 56.25em) and (min-width: 56.25em) {
