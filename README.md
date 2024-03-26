@@ -9,3 +9,6 @@ Página web de una supuesta floristería.
 ## Ejemplo en vivo 🖼️
 
 [![Flototeca](https://github.com/JoseSenent/la-floroteca/assets/96241175/2c8e8c71-c131-4200-8a7b-aa6f2e718029)](https://josesenent.github.io/la-floroteca/)
+
+## Licencia ©️
+La Floroteca © 2024 by José Senent is licensed under CC BY-NC 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/
