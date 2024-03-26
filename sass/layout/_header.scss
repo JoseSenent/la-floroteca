@@ -35,12 +35,13 @@
     // Contenedor del icono del menú personal. Éste puede ser un botón o un enlace
     &__icon-container {
       background-color: var(--white);
+      position: relative;
     }
 
     // Iconos del menú personal
     &__icon {
       color: var(--main-color);
-      font-size: var(--default-font-size);
+      font-size: var(--serif-tertiary-heading-size);
     }
 
     // Texto sobre el icono del menú del carrito de la compra que indica el número de productos adquiridos

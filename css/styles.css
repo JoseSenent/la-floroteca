@@ -874,10 +874,11 @@ body {
 }
 .header__mb-personal__icon-container {
   background-color: var(--white);
+  position: relative;
 }
 .header__mb-personal__icon {
   color: var(--main-color);
-  font-size: var(--default-font-size);
+  font-size: var(--serif-tertiary-heading-size);
 }
 .header__mb-personal__info {
   font-size: var(--quinary-heading-size);
