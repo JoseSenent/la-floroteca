@@ -9,3 +9,4 @@ Puedes añadir productos al carrito de la compra y se desplegará el total a pag
 ## Ejemplo en vivo
 * [https://la-floroteca.netlify.app/](https://la-floroteca.netlify.app/)
 
+![Flototeca](https://github.com/JoseSenent/la-floroteca/assets/96241175/2c8e8c71-c131-4200-8a7b-aa6f2e718029)
