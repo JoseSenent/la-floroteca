@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Defines cuánto es 1rem*/
+  font-size: 50%; /* 1rem = 8px/16px = 50% */
+
+  @include responsive(tab-land) {
+    font-size: 56.25%; // 1rem = 9px = 56.25%
+  }
+
+  @include responsive(desktop) {
+    font-size: 62.5%; // 1rem = 10px = 62.5%
+  }
+}
+
+body {
+  background-color: var(--white);
+}
+
+input,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  display: block;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--lightgray);
+  border-radius: 100vw;
+  margin-block: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--maroon);
+  border-radius: 100vh;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--yellow);
+}

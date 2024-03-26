@@ -1,0 +1,28 @@
+{
+  "name": "la-floroteca",
+  "version": "1.0.0",
+  "description": "Página web de una floristería",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/styles.css -w",
+    "watch:ts": "tsc -w",
+    "devserver": "live-server",
+    "compile:sass": "sass sass/main.scss css/styles.comp.css",
+    "concat:css": "concat -o css/styles.concat.css css/styles.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/styles.concat.css -o css/styles.prefix.css",
+    "minify:css": "css-minify -f css/styles.prefix.css -o css/styles.min.css",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css minify:css"
+  },
+  "author": "José Senent",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.18",
+    "concat": "^1.0.3",
+    "css-minify": "^2.0.0",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.72.0",
+    "typescript": "^5.4.2"
+  }
+}

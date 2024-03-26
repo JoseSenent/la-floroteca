@@ -1,0 +1,72 @@
+@mixin flex($direction, $wrap, $align, $justify, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin fonts($font-family, $font-weight, $font-size, $color) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin background-image($url, $repeat, $size, $position) {
+  background-image: url($url);
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: center center;
+}
+
+// Crea un filtro con el color principal de fondo en las secciones de características y críticas
+@mixin green-filter() {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-color-translucid);
+  z-index: 2;
+}
+
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == tab-port) {
+    @media only screen and (min-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == breakout-41) {
+    @media only screen and (min-width: 41.25em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == breakout-45) {
+    @media only screen and (min-width: 45em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tab-land) {
+    @media only screen and (min-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == breakout-66) {
+    @media only screen and (min-width: 66em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == desktop) {
+    @media only screen and (min-width: 75em) {
+      @content;
+    }
+  }
+}

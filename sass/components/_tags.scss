@@ -1,0 +1,33 @@
+// Etiqueta que indica si el producto se encuentra en oferta
+.tag-sale {
+  position: absolute;
+  // font-size: var(--default-font-size);
+  top: var(--sm-size);
+  left: 0;
+  transform: rotate(-20deg);
+  background-color: var(--lightmagenta);
+  color: var(--white);
+  border-radius: 50px;
+  padding: 0.6rem 0.8rem;
+
+  @include responsive(desktop) {
+    top: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+// Etiqueta que indica si el producto es nuevo
+.tag-new {
+  position: absolute;
+  // font-size: var(--default-font-size);
+  color: var(--white);
+  top: 0;
+  right: 0;
+  padding: 2.2rem;
+  @include background-image(
+    "../images/system/new-tag.png",
+    no-repeat,
+    contain,
+    center center
+  );
+}

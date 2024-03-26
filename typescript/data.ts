@@ -1,0 +1,156 @@
+// Interfaz de la array con cada uno de los productos que se desplegarán en la página web
+export interface typeProduct {
+  id: number; // La id del producto
+  name: string; // Nombre del producto
+  image: string; // La url de la imagen previamente importado
+  category: string; // Categoría a la que pertenece el producto
+  is_new: boolean; // Verifica si el producto se ha añadido recientemente a la tienda
+  discount: number; // Descuento del producto; si es 0, entonces no tiene
+  price: number; // El precio base del producto
+  quantity: number; // cantidades que has pedido de un producto
+}
+
+const dataProducts: typeProduct[] = [
+  {
+    id: 1,
+    name: "Arreglo Regio",
+    image: "images/bouquets/arreglo-regio.jpg",
+    category: "bouquets",
+    is_new: false,
+    discount: 20,
+    price: 66.23,
+    quantity: 0,
+  },
+  {
+    id: 2,
+    name: "Adorno Irisado",
+    image: "images/bouquets/adorno-irisado.jpg",
+    category: "bouquets",
+    is_new: true,
+    discount: 0,
+    price: 36.95,
+    quantity: 0,
+  },
+  {
+    id: 3,
+    name: "Pastel Himeneo",
+    image: "images/bouquets/pastel-himeneo.jpg",
+    category: "bouquets",
+    is_new: false,
+    discount: 20,
+    price: 82.4,
+    quantity: 0,
+  },
+  {
+    id: 4,
+    name: "Pasión Corinta",
+    image: "images/bouquets/pasion-corinta.jpg",
+    category: "bouquets",
+    is_new: true,
+    discount: 0,
+    price: 48.9,
+    quantity: 0,
+  },
+  {
+    id: 5,
+    name: "Toque Níveo",
+    image: "images/bouquets/toque-niveo.jpg",
+    category: "bouquets",
+    is_new: false,
+    discount: 20,
+    price: 78.7,
+    quantity: 0,
+  },
+  {
+    id: 6,
+    name: "Vergel Angelical",
+    image: "images/bouquets/vergel-angelical.jpg",
+    category: "bouquets",
+    is_new: true,
+    discount: 0,
+    price: 42.99,
+    quantity: 0,
+  },
+  {
+    id: 7,
+    name: "Algente Formal",
+    image: "images/centerpieces/algente-formal.jpg",
+    category: "centerpieces",
+    is_new: false,
+    discount: 20,
+    price: 31.4,
+    quantity: 0,
+  },
+  {
+    id: 8,
+    name: "Calidez Briosa",
+    image: "images/centerpieces/calidez-briosa.jpg",
+    category: "centerpieces",
+    is_new: true,
+    discount: 0,
+    price: 37.9,
+    quantity: 0,
+  },
+  {
+    id: 9,
+    name: "Alumbre Regio",
+    image: "images/centerpieces/alumbre-regio.jpg",
+    category: "centerpieces",
+    is_new: false,
+    discount: 20,
+    price: 107.45,
+    quantity: 0,
+  },
+  {
+    id: 10,
+    name: "Espesura Ardiente",
+    image: "images/centerpieces/espesura-ardiente.jpg",
+    category: "centerpieces",
+    is_new: true,
+    discount: 0,
+    price: 45.97,
+    quantity: 0,
+  },
+  {
+    id: 11,
+    name: "Aroma Primaveral",
+    image: "images/flowerbaskests/aroma-primaveral.jpg",
+    category: "flowerbaskests",
+    is_new: false,
+    discount: 10,
+    price: 23.37,
+    quantity: 0,
+  },
+  {
+    id: 12,
+    name: "Viveza Parda",
+    image: "images/flowerbaskests/viveza-parda.jpg",
+    category: "flowerbaskests",
+    is_new: false,
+    discount: 0,
+    price: 32.95,
+    quantity: 0,
+  },
+  {
+    id: 13,
+    name: "Dádiva de Unión",
+    image: "images/flowerbaskests/dadiva-de-union.jpg",
+    category: "flowerbaskests",
+    is_new: true,
+    discount: 0,
+    price: 83.9,
+    quantity: 0,
+  },
+  {
+    id: 14,
+    name: "Ocaso Verde",
+    image: "images/flowerbaskests/ocaso-verde.jpg",
+    category: "flowerbaskests",
+    is_new: false,
+    discount: 0,
+    price: 35.82,
+    quantity: 0,
+  },
+];
+
+export default dataProducts;

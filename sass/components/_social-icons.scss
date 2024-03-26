@@ -1,0 +1,36 @@
+.social {
+  // Iconos de redes sociales en el menú de navegación móvil y en el footer
+  &__container,
+  &__container--footer {
+    display: flex;
+    gap: var(--sm-size);
+  }
+
+  &__link {
+    color: var(--main-color);
+
+    &:hover {
+      color: var(--main-color-translucid);
+    }
+
+    // Enlaces de las redes sociales dentro de los iconos
+    &,
+    &--footer {
+      font-size: var(--secondary-heading-size);
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &--footer:hover {
+      transform: scale(1.2);
+    }
+
+    &--footer {
+      color: var(--white);
+
+      &:hover {
+        color: var(--white-translucid);
+      }
+    }
+  }
+}

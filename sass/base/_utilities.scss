@@ -1,0 +1,42 @@
+// Evita que el texto pueda ser resaltado
+.u-disable-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.u-bold {
+  font-weight: 700;
+}
+
+.u-extra-bold {
+  font-weight: 900;
+}
+
+.u-color-white {
+  color: var(--white);
+}
+
+.u-color-black {
+  color: var(--black);
+}
+
+.u-margin-top-xs {
+  margin-top: var(--tn-size);
+}
+
+.u-margin-top-s {
+  margin-top: var(--sm-size);
+}
+
+.u-margin-top-m {
+  margin-top: var(--md-size);
+}
+
+.u-margin-top-l {
+  margin-top: var(--bg-size);
+}
+
+.u-margin-top-xl {
+  margin-top: var(--lg-size);
+}

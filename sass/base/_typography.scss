@@ -1,0 +1,137 @@
+// tipografía general
+body {
+  @include fonts(var(--lato), 400, var(--default-font-size), var(--black));
+  line-height: 1.4;
+}
+
+// Encabezado Primario (h1)
+.heading-1 {
+  @include fonts(
+    var(--oranienbaum),
+    900,
+    var(--primary-heading-size),
+    var(--white)
+  );
+  letter-spacing: 2px;
+}
+
+// Encabezado Secundario (h2)
+.heading-2 {
+  @include fonts(
+    var(--oranienbaum),
+    700,
+    var(--secondary-heading-size),
+    var(--transparent)
+  );
+
+  background-image: linear-gradient(
+    to right,
+    var(--lightgreen),
+    var(--main-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  width: fit-content;
+  text-align: center;
+  margin-inline: auto;
+  position: relative;
+}
+
+// Añade dos líneas pardas a ambos lados del encabezado
+.heading-2::before,
+.heading-2::after {
+  content: "";
+  height: 2px;
+  width: 5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+
+  @include responsive(tab-port) {
+    width: 9rem;
+  }
+}
+
+.heading-2::before {
+  background-image: linear-gradient(to left, var(--maroon), var(--transparent));
+  left: -6rem; // la anchura de la línea (5rem) menos 1rem (10px) de margen
+
+  @include responsive(tab-port) {
+    background-image: linear-gradient(
+      to left,
+      var(--maroon) 40%,
+      var(--transparent)
+    );
+    left: -10rem;
+  }
+}
+
+.heading-2::after {
+  background-image: linear-gradient(
+    to right,
+    var(--maroon),
+    var(--transparent)
+  );
+  right: -6rem;
+
+  @include responsive(tab-port) {
+    background-image: linear-gradient(
+      to right,
+      var(--maroon) 40%,
+      var(--transparent)
+    );
+    right: -10rem;
+  }
+}
+
+// Encabezado terciario (h3) con tipografía serif y color principal
+.heading-3 {
+  @include fonts(
+    var(--oranienbaum),
+    700,
+    var(--serif-tertiary-heading-size),
+    var(--main-color)
+  );
+  letter-spacing: 1px;
+}
+
+// Encabezado terciario (h3) con tipografía serif y color negro
+.heading-3--sans {
+  @include fonts(
+    var(--lato),
+    700,
+    var(--sans-tertiary-heading-size),
+    var(--black)
+  );
+}
+
+// Encabezado Cuaternario (h4)
+.heading-4 {
+  @include fonts(
+    var(--lato),
+    700,
+    var(--quaternary-heading-size),
+    var(--black)
+  );
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+//Encabezado Quinario (h5)
+.heading-5 {
+  @include fonts(
+    var(--lato),
+    inherit,
+    var(--quinary-heading-size),
+    var(--main-color)
+  );
+}
+
+// Párrafos
+.paragraph {
+  @include fonts(var(--lato), 400, var(--default-font-size), var(--darkgray));
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}

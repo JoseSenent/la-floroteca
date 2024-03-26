@@ -1,0 +1,12 @@
+// Línea horizontal para separar contenido
+:is(.line-break, .line-break--footer) {
+  height: 1px;
+}
+
+.line-break {
+  background-color: var(--maroon);
+
+  &--footer {
+    background-color: var(--white);
+  }
+}

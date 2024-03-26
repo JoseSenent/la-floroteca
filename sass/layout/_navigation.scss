@@ -1,0 +1,89 @@
+@include responsive(desktop) {
+  .dk-navigation {
+    // Lista del menú de navegación en desktop (ul)
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-right: 2rem;
+      }
+    }
+
+    // Enlaces del menú de navegación
+    &__link {
+      color: var(--black);
+      font-weight: 700;
+      transition: all 0.1s;
+
+      &:hover {
+        color: var(--main-color);
+        text-decoration: underline;
+        text-decoration-color: var(--maroon);
+        text-decoration-thickness: 2px;
+      }
+    }
+
+    // El texto del primer item del menú de navegación se muestra con el color principal
+    &__item:first-child > &__link {
+      color: var(--main-color);
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// Menú popup de navegación por móvil
+.mb-navigation {
+  background-color: var(--white);
+  padding: var(--lg-size);
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  top: 10rem;
+  z-index: 10;
+  transition: transform 0.4s;
+
+  // Al añadir la clase «is-open» se despliega el correspondiente menú
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  @include responsive(tab-port) {
+    width: 75vw;
+  }
+
+  @include responsive(tab-land) {
+    width: 50vw;
+  }
+
+  @include responsive(desktop) {
+    // Una vez la pantalla llega a los 1200px ya no se muestra el menú de navegación por móvil
+    display: none;
+  }
+
+  &__nav {
+    &__list {
+      @include flex(column, initial, initial, initial, var(--sm-size));
+    }
+
+    &__item {
+      font-size: inherit;
+    }
+
+    &__link {
+      color: inherit;
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--main-color);
+        text-decoration: underline;
+        text-decoration-color: var(--maroon);
+        text-decoration-thickness: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+// Botón de suprimir, elimina el producto del carrito de la compra
+.delete-btn {
+  background-color: var(--transparent);
+
+  &__icon {
+    font-size: var(--default-font-size);
+    color: var(--black);
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--main-color);
+    }
+  }
+}
+
+// Botón de añadir un producto al carrito
+.add-to-cart-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--maroon);
+  padding: 0.4rem 0;
+  color: var(--white);
+  // font-size: var(--default-font-size);
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: var(--yellow);
+    color: var(--main-color);
+  }
+}
+
+//Botón Principal
+.btn {
+  // font-size: var(--default-font-size);
+  color: var(--white);
+  background-color: var(--main-color);
+  padding: var(--tn-size) var(--bg-size);
+  border: 1px solid var(--white);
+  outline: 1px solid var(--black);
+  margin-inline: auto;
+  transition: transform 0.1s;
+
+  &__icon {
+    margin-right: 0.6rem;
+  }
+
+  &:hover {
+    background-color: var(--green);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+// Botón Call to Action (CTA)
+.cta-btn {
+  margin-inline: auto;
+
+  &,
+  &--form {
+    font-family: var(--oranienbaum);
+    padding: var(--tn-size) var(--bg-size);
+    background-color: var(--magenta);
+    border-radius: 50px;
+    border: 1px solid var(--white);
+    outline: 1px solid var(--black);
+    transition: transform 0.4s;
+  }
+  &:hover,
+  &--form:hover {
+    background-color: var(--lightmagenta);
+  }
+
+  &:hover {
+    box-shadow: 0 4px 6px 2px var(--black-tenous);
+    transform: translateY(-0.8rem);
+  }
+
+  &:active {
+    transition: transform 0.1s;
+    transform: translateY(-0.8rem) scale(0.9);
+  }
+
+  &--form:active {
+    transition: transform 0.1s;
+    transform: translateY(0.8rem) scale(0.95);
+  }
+
+  &__link {
+    font-size: var(--serif-tertiary-heading-size);
+    color: var(--white);
+  }
+}
+
+// Botón de cerrar
+.close-btn {
+  background-color: var(--white);
+  font-size: var(--sans-tertiary-heading-size);
+
+  &:hover {
+    color: var(--main-color);
+  }
+}
+
+// Botón de texto
+.text-btn {
+  padding: var(--tn-size);
+  margin-left: calc(var(--tn-size) * -1);
+  // font-size: var(--default-font-size);
+  color: var(--main-color);
+  background-color: var(--transparent);
+  text-decoration: underline;
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s, transform 0.2s;
+
+  &:hover {
+    transform: translateX(var(--tn-size));
+    color: var(--white);
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    width: 0;
+    transition: width 0.4s;
+  }
+}

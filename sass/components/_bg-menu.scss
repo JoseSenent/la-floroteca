@@ -1,0 +1,64 @@
+// Menú hamburguesa
+
+// Establece el fondo del menú hamburguesa donde se podrá clicar
+.bg-menu {
+  background-color: var(--transparent);
+  cursor: pointer;
+  padding: var(--quinary-heading-size) 0.6rem 0;
+
+  @include responsive(desktop) {
+    display: none;
+  }
+
+  // Cuando se añade la clase «is-open» el menu se convierte en una «X»
+  &.isopen {
+    z-index: 90;
+  }
+
+  &__icon {
+    position: relative;
+
+    &.is-open {
+      z-index: 100;
+      background-color: var(--transparent);
+    }
+
+    // Aquí se crean las tres líneas que componen un menú hamburguesa
+    &,
+    &::before,
+    &::after {
+      background-color: var(--main-color);
+      height: 2px;
+      width: var(--secondary-heading-size);
+      display: inline-block;
+      transition: all 0.4s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -1rem;
+
+      &.is-open {
+        z-index: 100;
+        top: 0;
+        transform: rotate(225deg);
+      }
+    }
+
+    &::after {
+      top: 1rem;
+
+      &.is-open {
+        z-index: 100;
+        top: 0;
+        transform: rotate(-225deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.header {
+  height: var(--header-size);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--maroon);
+  @include flex(row, nowrap, center, space-around, 0);
+
+  @include responsive(desktop) {
+    padding-left: 5rem;
+    justify-content: flex-start;
+    gap: 5rem;
+    font-family: var(--lato);
+    letter-spacing: 1px;
+  }
+
+  &__logo-container {
+    width: 10rem;
+
+    @include responsive(desktop) {
+      width: 18rem;
+    }
+  }
+
+  // Parte del header que contiene el menú personal (usuario, carrito y búsqueda) en versión móvil;
+  &__mb-personal {
+    @include flex(row, nowrap, initial, initial, var(--md-size));
+
+    @include responsive(desktop) {
+      display: none;
+    }
+
+    // Contenedor del icono del menú personal. Éste puede ser un botón o un enlace
+    &__icon-container {
+      background-color: var(--white);
+    }
+
+    // Iconos del menú personal
+    &__icon {
+      color: var(--main-color);
+      font-size: var(--default-font-size);
+    }
+
+    // Texto sobre el icono del menú del carrito de la compra que indica el número de productos adquiridos
+    &__info {
+      font-size: var(--quinary-heading-size);
+      color: var(--white);
+      background-color: var(--magenta);
+      padding: 0.2rem 0.4rem 0;
+      border-radius: 50%;
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+    }
+  }
+
+  // El menú que se verá en desktops
+  &__menu {
+    display: none;
+
+    // A partir de los 1200px se visaliza este menú
+    @include responsive(desktop) {
+      height: 100%;
+      @include flex(column, nowrap, initial, space-between, 0);
+    }
+  }
+
+  // Parte superior del menú del header. Presenta el color principal de fondo
+  &__top-menu {
+    @include responsive(desktop) {
+      background-color: var(--main-color);
+      padding: 2rem 3rem;
+      border-bottom-left-radius: 30px;
+      // 100vw menos el width del logo, el gap entre el logo y este bloque, además de la suma del padding derecho e izquierdo
+      width: calc(100vw - 18rem - 5rem - 6rem);
+      @include flex(row, nowrap, center, space-between, 0);
+    }
+  }
+
+  &__contact {
+    // Contenedor de la información de contacto
+    &__container {
+      @include responsive(desktop) {
+        display: flex;
+        gap: 3rem;
+      }
+    }
+
+    // Texto de la información de contacto
+    &__item {
+      @include responsive(desktop) {
+        display: flex;
+        gap: 0.5rem;
+        color: var(--white);
+        // font-size: var(--default-font-size);
+      }
+    }
+
+    // El texto de «Contáctanos» se muestra de un color amarillo
+    &__info:first-child {
+      @include responsive(desktop) {
+        color: var(--yellow);
+      }
+    }
+  }
+
+  &__dk-personal {
+    // El menú personal, pero en versión para pantallas grandes
+    &__container {
+      @include responsive(desktop) {
+        display: flex;
+        gap: 3rem;
+      }
+    }
+    // Contenedor de cada icono del menú personal. Éste puede ser un enlace o un botón
+    &__icon-box {
+      @include responsive(desktop) {
+        color: var(--white);
+        background-color: var(--transparent);
+        font-size: var(--serif-tertiary-heading-size);
+        position: relative;
+      }
+    }
+
+    // Texto sobre el icono del menú del carrito de la compra que indica el número de productos adquiridos
+    &__info {
+      @include responsive(desktop) {
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+        padding: 0.2rem 0.4rem 0;
+        border-radius: 50%;
+        font-size: 1.4rem;
+        background-color: var(--magenta);
+      }
+    }
+  }
+}

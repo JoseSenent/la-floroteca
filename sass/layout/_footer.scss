@@ -1,0 +1,70 @@
+.footer {
+  padding: var(--lg-size) var(--md-size) var(--tn-size);
+  background-color: var(--darkgray);
+  text-align: center;
+
+  // Contiene toda la parte superior del footer, hasta las redes sociales
+  &__container {
+    @include flex(column, nowrap, center, initial, var(--md-size));
+
+    @include responsive(tab-land) {
+      flex-direction: row;
+    }
+  }
+
+  // Contenedor del logo del footer
+  &__logo-container {
+    width: 16rem;
+
+    @include responsive(tab-land) {
+      width: 20rem;
+    }
+
+    @include responsive(desktop) {
+      width: 25rem;
+    }
+  }
+
+  // Los enlaces están agrupados por secciones englobados por este contenedor
+  &__section-container {
+    @include flex(column, nowrap, initial, initial, var(--md-size));
+
+    @include responsive(tab-land) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  // Sección que contiene una sarta de enlaces
+  &__section {
+    @include flex(column, nowrap, initial, initial, var(tn-size));
+
+    @include responsive(tab-land) {
+      flex: 0 30%;
+    }
+  }
+
+  // Cada uno de los enlaces del footer
+  &__content {
+    @include fonts(var(--lato), 400, var(--default-font-size), var(--white));
+
+    &[href="#"]:hover {
+      color: var(--white-translucid);
+    }
+  }
+
+  // Contenedor de los iconos de redes sociales del footer
+  &__social {
+    @include flex(column, nowrap, center, initial, var(--sm-size));
+  }
+
+  // Texto colocado a pie de página para señalar el copyright y la autoría de la web
+  &__disclaimer {
+    display: block;
+    @include fonts(inherit, 300, var(--default-font-size), var(--white));
+
+    @include responsive(tab-land) {
+      text-align: right;
+    }
+  }
+}

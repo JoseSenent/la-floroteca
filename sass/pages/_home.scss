@@ -1,0 +1,668 @@
+// Main
+.main {
+  position: relative;
+
+  &.is-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--black-translucid);
+    z-index: 5;
+  }
+}
+
+// Sección Hero
+.hero {
+  height: calc(100vh - var(--header-size));
+  margin-top: var(--header-size);
+  position: relative;
+
+  @include flex(row, nowrap, center, center, 0);
+
+  @include background-image(
+    "../images/hero/hero-image.jpg",
+    no-repeat,
+    cover,
+    center center
+  );
+
+  // Se crea un filtro para oscurecer el hero y hacerlo más legible
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--black-translucid);
+  }
+
+  &__text-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+}
+
+// Secciones productos: Ramos, Centros de mesa y Cestas de flores
+.featured-bouquets,
+.featured-centerpieces,
+.featured-flowerbaskets {
+  text-align: center;
+  padding: var(--tn-size);
+}
+
+// Sección Sobre nosotros
+.about-us {
+  padding: var(--md-size);
+
+  @include responsive(tab-port) {
+    padding: var(--md-size) 15%;
+  }
+
+  @include responsive(tab-land) {
+    padding: var(--md-size) 20%;
+  }
+
+  @include responsive(desktop) {
+    padding: var(--md-size) 7rem;
+  }
+
+  // Imagen de la sección
+  &__image {
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+
+    @include responsive(tab-land) {
+      border-width: 4px;
+    }
+  }
+
+  &__text-container {
+    margin-top: var(--sm-size);
+  }
+
+  // Contenedor que engloba tanto la imagen como el texto
+  &__container {
+    @include flex(row-reverse, nowrap, center, initial, 3rem);
+  }
+
+  &__text-container {
+    margin-top: 0;
+  }
+}
+
+// Sección de las distintas ocasiones
+.events {
+  text-align: center;
+  padding: var(--tn-size);
+
+  // Contenedor que engloba todas las tarjetas de las ocasiones
+  &__container {
+    @include flex(row, wrap, initial, center, var(--tn-size) var(--sm-size));
+  }
+
+  // Cada tarjeta de ocasión de manera individual
+  &__box {
+    flex: 0 calc(50% - 1rem);
+    border: 1px solid var(--maroon);
+    border-radius: 5px;
+    padding: var(--tn-size);
+    transition: all 0.2s;
+
+    @include fonts(
+      var(--lato),
+      400,
+      var(--sans-tertiary-heading-size),
+      var(--black)
+    );
+
+    @include flex(row, nowrap, center, initial, var(--tn-size));
+
+    @include responsive(tab-port) {
+      flex: 0 30%;
+    }
+
+    @include responsive(tab-land) {
+      flex: 0 23%;
+    }
+
+    @include responsive(desktop) {
+      flex: 0 20%;
+    }
+
+    &:hover {
+      border: 1px solid var(--lightgray);
+      background-color: var(--main-color);
+      color: var(--white);
+
+      & .events__icon {
+        color: var(--white);
+      }
+    }
+  }
+
+  // Icono dentro de la tarjeta de ocasión
+  &__icon {
+    color: var(--main-color);
+    transition: color 0.2s;
+  }
+
+  // Texto dentro de la tarjeta que indica el nombre de la ocasión
+  &__content:hover {
+    text-decoration: underline;
+  }
+
+  // La flecha dentro de la tarjeta de ocasiones
+  &__arrow {
+    font-size: var(--default-font-size);
+  }
+}
+
+// Sección de características
+.features {
+  &__container {
+    text-align: center;
+    padding: var(--md-size);
+    position: relative;
+    z-index: 1;
+
+    @include flex(row, wrap, initial, center, var(--sm-size));
+    @include background-image(
+      "../images/features/features-bg.jpg",
+      no-repeat,
+      cover,
+      center center
+    );
+
+    // Se crea un filtro con el color principal de fondo
+    &::before {
+      @include green-filter();
+    }
+  }
+
+  &__card {
+    z-index: 3;
+    flex: 0 70%;
+    background-color: var(--white-translucid);
+    padding: var(--md-size) var(--tn-size);
+    border-radius: 10px;
+    transition: transform 0.2s;
+
+    @include responsive(tab-port) {
+      flex: 0 35%;
+    }
+
+    @include responsive(tab-land) {
+      flex: 0 22%;
+    }
+
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+
+  // Icono de la característica dentro de la carta
+  &__icon {
+    color: var(--main-color);
+    font-size: var(--primary-heading-size);
+  }
+}
+
+// Sección de novedades en el blog
+.blog-news {
+  background-color: var(--yellow);
+  padding: var(--sm-size);
+
+  // Contenedor de todas las noticias del blog
+  &__container {
+    @include flex(row, wrap, initial, center, var(--md-size));
+  }
+
+  // Contenedor de cada tarjeta de noticias del blog
+  &__card {
+    flex: 0 80%;
+    background-color: var(--white);
+    border-radius: 10px;
+
+    @include responsive(breakout-45) {
+      flex: 0 47%;
+    }
+
+    @include responsive(breakout-66) {
+      flex: 0 30%;
+    }
+
+    &:hover {
+      animation: bump 0.4s;
+    }
+  }
+
+  // Contenedor de la imagen de la noticia
+  &__image-container {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+  }
+
+  // Imagen de la noticia del blog
+  &__image {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // Contenedor del texto de la noticia
+  &__text-container {
+    padding: var(--md-size) var(--sm-size);
+  }
+}
+
+// Sección de complementos
+.complements {
+  text-align: center;
+  padding: var(--tn-size) var(--tn-size) var(--md-size);
+}
+
+// Sección de críticas
+.reviews {
+  &__container {
+    padding: var(--md-size) var(--sm-size);
+    position: relative;
+    z-index: 1;
+
+    @include background-image(
+      "../images/reviews/reviews-bg.jpg",
+      no-repeat,
+      cover,
+      center center
+    );
+
+    @include flex(row, wrap, initial, center, var(--md-size));
+
+    @include responsive(desktop) {
+      flex-direction: column;
+      padding: var(--md-size) 10rem;
+    }
+
+    &::before {
+      @include green-filter();
+    }
+  }
+
+  // Cada carta individual que contiene la crítica, la valoración, el enlace a la página donde se realizó la crítica y el nombre del usuario
+  &__card {
+    z-index: 3;
+    flex: 0 80%;
+    background-color: var(--white-translucid);
+    border-radius: 10px;
+    padding: 1rem 1.5rem 3rem;
+
+    @include responsive(breakout-41) {
+      flex: 0 47%;
+    }
+
+    @include responsive(tab-land) {
+      flex: 0 30%;
+    }
+
+    @include responsive(desktop) {
+      width: 85rem;
+      position: relative;
+      padding: 3rem;
+      @include flex(row, nowrap, center, initial, 5rem);
+
+      &:nth-child(2) {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  // Cabecera de la carta de la crítica
+  &__card-header {
+    @include flex(column, nowrap, center, initial, 0);
+
+    @include responsive(desktop) {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+    }
+
+    // Contenedor de la imagen de usuario en la cabecera de la crítica
+    &__img-container {
+      height: 12rem;
+      width: 12rem;
+    }
+
+    // Imagen de usuario de la cabecera de la crítica
+    &__img {
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--main-color);
+    }
+
+    // Contenedor situado en la cabecera de la carta de crítica  que engloba el enlace de la página donde se realizó, así como la valoración
+    &__link-rate-container {
+      @include flex(row, nowrap, center, initial, 2rem);
+
+      @include responsive(desktop) {
+        flex-direction: column-reverse;
+        position: absolute;
+        top: 0;
+        right: 10rem;
+      }
+    }
+
+    // Contenedor que engloba la valoración (en estrellas) que el usuario ha otorgado a la tienda
+    &__rate-container {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    // Aquí se crean las estrellas que son usadas para la valoración
+    &__star--fill,
+    &__star--empty {
+      height: var(--default-font-size);
+      width: var(--default-font-size);
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+    }
+
+    // las estrellas llenas se muestran coloridas
+    &__star--fill {
+      background-color: var(--lightmagenta);
+    }
+
+    // Las estrellas vacías se muestran de un color gris
+    &__star--empty {
+      background-color: var(--darkgray);
+    }
+
+    // Enlace a la página donde se realizó la crítica
+    &__link {
+      font-size: var(--default-font-size);
+      color: var(--lightmagenta);
+    }
+  }
+
+  &__card-body {
+    margin-top: var(--sm-size);
+
+    @include responsive(desktop) {
+      margin-top: 0;
+    }
+  }
+}
+
+// Sección de personalizar tu propio ramo
+.custom-bouquet {
+  background-color: var(--yellow);
+  padding: var(--lg-size) var(--md-size) var(--md-size);
+
+  @include responsive(tab-port) {
+    padding: var(--lg-size) 15% var(--md-size);
+  }
+
+  @include responsive(tab-land) {
+    padding: var(--lg-size) 20% var(--md-size);
+  }
+
+  @include responsive(desktop) {
+    padding: var(--md-size) 7rem;
+
+    &__container {
+      @include flex(row, nowrap, center, initial, 3rem);
+    }
+  }
+
+  // Imagen de la sección
+  &__image {
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+
+    @include responsive(desktop) {
+      border-width: 4px;
+    }
+  }
+
+  &__text-container {
+    margin-top: var(--sm-size);
+
+    @include responsive(desktop) {
+      margin-top: 0;
+    }
+  }
+}
+
+// Sección de galería
+.gallery {
+  text-align: center;
+  padding: var(--bg-size) var(--tn-size);
+
+  @include responsive(tab-land) {
+    padding: var(--bg-size);
+  }
+
+  // Enlace que se muestra en el subencabezado de la sección
+  &__text-link {
+    display: inline-block;
+    color: var(--main-color);
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--main-color-translucid);
+      transform: translateY(-0.4rem);
+    }
+  }
+
+  // Contenedor de las imágenes que conforman la galería
+  &__container {
+    @include flex(row, wrap, center, center, var(--tn-size));
+
+    @include responsive(desktop) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 20rem);
+      align-items: stretch;
+    }
+  }
+
+  // Contenedor de cada imagen
+  &__image-box {
+    flex: 48%;
+    height: 20rem;
+    overflow: hidden;
+
+    @include responsive(tab-port) {
+      flex: 32%;
+    }
+
+    @include responsive(desktop) {
+      height: auto;
+
+      &--1 {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+      }
+
+      &--2 {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+      }
+
+      &--3 {
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 2;
+      }
+
+      &--4 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+      }
+
+      &--5 {
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 2;
+      }
+
+      &--6 {
+        grid-column: 4 / span 1;
+        grid-row: 3 / span 1;
+      }
+
+      &--7 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 2;
+      }
+
+      &--8 {
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 1;
+      }
+
+      &--9 {
+        grid-column: 3 / span 2;
+        grid-row: 4 / span 1;
+      }
+
+      &:hover .gallery__image {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  // Las distintas imágenes de la galería
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+}
+
+// Sección de newsletter
+.newsletter {
+  padding: var(--md-size);
+  background-image: linear-gradient(
+    135deg,
+    var(--lightgreen),
+    var(--main-color)
+  );
+
+  @include responsive(desktop) {
+    padding: var(--bg-size);
+  }
+
+  // Contenedor de newsletter que engloba el formulario y el encabezado
+  &__card {
+    background-color: var(--white);
+    padding: var(--sm-size);
+    text-align: center;
+
+    @include responsive(tab-port) {
+      width: 65%;
+      margin: 0 auto;
+    }
+
+    @include responsive(tab-land) {
+      margin: 0;
+      flex: 0 40%;
+
+      // Encabezado que se posiciona sobre el formulario. En pantallas grandes no se muestra
+      &__heading {
+        display: none;
+      }
+    }
+
+    @include responsive(desktop) {
+      padding: 5rem 3.5rem;
+    }
+  }
+
+  @include responsive(tab-land) {
+    // Contenedor que muestra el formulario de la newsletter y la imagen que lo acompaña
+    &__container {
+      display: flex;
+      justify-content: center;
+
+      @include responsive(desktop) {
+        height: 35rem;
+      }
+    }
+
+    // La imagen no se muestra en pantallas pequeñas
+    &__image {
+      display: none;
+
+      // Imagen que acompaña el formulario de la newsletter
+      @include responsive(tab-land) {
+        padding: 3rem;
+        flex: 0 40%;
+        position: relative;
+
+        @include background-image(
+          "../images/newsletter/newsletter-img.jpg",
+          no-repeat,
+          cover,
+          center center
+        );
+
+        @include flex(row, wrap, center, center, 0);
+
+        // Se crea un filtro de color negro translúcido para hacer el texto más legible
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: var(--black-translucid);
+        }
+
+        &__heading {
+          color: var(--white);
+          text-align: center;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
+// Formulario
+.form {
+  @include flex(column, nowrap, initial, initial, calc(var(--tn-size) * 1.5));
+
+  // Cada uno de los campos a rellenar del formulario
+  &__input {
+    border: 2px solid var(--darkgray);
+    border-radius: 5px;
+    padding: 0.4rem var(--tn-size);
+    font-size: var(--default-font-size);
+    color: var(--black);
+
+    &:focus {
+      outline: none;
+      border-color: var(--main-color);
+    }
+
+    &::placeholder {
+      color: var(--lightgray);
+    }
+  }
+}

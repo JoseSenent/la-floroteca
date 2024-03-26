@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="José Senent" />
+    <meta
+      name="description"
+      content="Floristería con más de 10 años de experiencia. La entrega de cualquier arreglo se garantiza en 24h máximo."
+    />
+    <meta name="theme-color" content="#1ea992" />
+
+    <link rel="shortcut icon" type="image/svg" href="images/system/logo.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Oranienbaum&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.min.css" />
+
+    <script
+      src="https://kit.fontawesome.com/71deb8a10f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>La Floroteca | Envío de flores a dcomicilio en 24h</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="es">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Atribución de la autoría de la página web -->
+        <meta name="author" content="José Senent" />
+        <!-- Descripción de la página web -->
+        <meta
+          name="description"
+          content="Floristería con más de 10 años de experiencia. La entrega de cualquier arreglo se realiza en un plazo de 24h garantizado."
+        />
+        <!-- Cambia el color del menú superior cuando se visualiza la web en móvil -->
+        <meta name="theme-color" content="#1ea992" />
+
+        <!-- Favicon de la página web -->
+        <link
+          rel="shortcut icon"
+          type="image/svg"
+          href="images/sistema/favicon.svg"
+        />
+
+        <!-- Fuentes importadas de Google Fonts, en este caso «Lato» y «Oranienbaum» -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Oranienbaum&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- Enlace de Fontawesome desde el que se han importado todos los iconos de la página web -->
+        <script
+          src="https://kit.fontawesome.com/71deb8a10f.js"
+          crossorigin="anonymous"
+        ></script>
+
+        <title>La Floroteca | Envío de flores a domicilio en 24h</title>
+      </head>
+      <body>
+        <!-- Menú de navegación emergente en la versión móvil -->
+        <div class="mb-navigation" id="nav-menu">
+          <!-- Menú nav de la versión móvil -->
+          <nav class="mb-navigation__nav">
+            <ul class="mb-navigation__nav__list">
+              <li class="mb-navigation__nav__item">
+                <a href="#" class="mb-navigation__nav__link">Diseña tu ramo</a>
+              </li>
+              <li class="mb-navigation__nav__item">
+                <a href="#" class="mb-navigation__nav__link">Ocasiones</a>
+              </li>
+              <li class="mb-navigation__nav__item">
+                <a href="#" class="mb-navigation__nav__link">Ramos de flores</a>
+              </li>
+              <li class="mb-navigation__nav__item">
+                <a href="#" class="mb-navigation__nav__link">Centros de mesa</a>
+              </li>
+              <li class="mb-navigation__nav__item">
+                <a href="#" class="mb-navigation__nav__link"
+                  >Cestas de flores</a
+                >
+              </li>
+              <li class="mb-navigation__nav__item">
+                <a href="#" class="mb-navigation__nav__link">Complementos</a>
+              </li>
+
+              <!-- Línea divisoria -->
+              <div class="line-break"></div>
+
+              <li class="mb-navigation__nav__item">
+                <a href="#" class="mb-navigation__nav__link">
+                  Preguntas frecuentes
+                </a>
+              </li>
+              <li class="mb-navigation__nav__item">
+                <a href="#" class="mb-navigation__nav__link"> Contáctanos </a>
+              </li>
+              <li class="mb-navigation__nav__item">
+                <a href="#" class="mb-navigation__nav__link">
+                  Sobre nosotros
+                </a>
+              </li>
+              <li class="mb-navigation__nav__item">
+                <a href="#" class="mb-navigation__nav__link"> Blog </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Iconos de las redes sociales -->
+          <div class="social__container u-margin-top-xl">
+            <a href="#" class="social__link">
+              <i class="fa-brands fa-instagram social__icon"></i>
+            </a>
+
+            <a href="#" class="social__link">
+              <i class="fa-brands fa-facebook social__icon"></i>
+            </a>
+
+            <a href="#" class="social__link">
+              <i class="fa-brands fa-twitter social__icon"></i>
+            </a>
+
+            <a href="#" class="social__link">
+              <i class="fa-brands fa-pinterest social__icon"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Menú del carrito de la compra -->
+        <div class="cart-menu" id="cart-menu">
+          <!-- Parte superior del menú donde se indica el número de compras y se encuentra el botón de cierre -->
+          <div class="cart-menu__top-bar">
+            <!-- Aquí se muestra el número de productos adquiridos -->
+            <span class="cart-menu__top-bar__content">
+              Tu carrito (<span
+                class="js-purchase-count cart-menu__top-bar__purchase-count"
+                >0</span
+              >)
+            </span>
+
+            <!-- Botón de cierre de menú -->
+            <button class="js-close-cart-btn close-btn">
+              <i class="fa-solid fa-xmark close-btn__icon"></i>
+            </button>
+          </div>
+
+          <!-- Cuerpo del menú del carrito de la compra. Abajo se muestra el código por defecto. Éste cambia si se ha adquirido un producto -->
+          <div class="cart-menu__body" id="render-cart-menu">
+            <div class="cart-menu__body__img-container">
+              <img
+                src="images/cart-menu/jarron-trazado.png"
+                alt="jarrón de girasoles"
+                class="cart-menu__body__img"
+                loading="lazy"
+              />
+            </div>
+            <span class="cart-menu__body__text u-bold u-margin-top-s">
+              ¡Tu carrito está vacío!
+            </span>
+            <span class="cart-menu__body__text">
+              Llénalo con flores de verdad.
+            </span>
+
+            <!-- Este botón también sirve para cerrar el menú -->
+            <button class="js-close-cart-btn btn u-margin-top-l">
+              Seguir comprando
+            </button>
+          </div>
+        </div>
+
+        <!-- Inicio del header -->
+        <header class="header">
+          <!-- Menú hamburguesa que despliega el menú de navegación para móviles -->
+          <div class="bg-menu" id="bg-menu">
+            <!-- El icono del menú es creado mediante CSS -->
+            <span class="bg-menu__icon u-disable-select" id="bg-menu-icon">
+              &nbsp;
+            </span>
+          </div>
+
+          <!-- Logo de la página web -->
+          <a href="#" class="header__logo-container">
+            <img
+              src="images/system/logo.svg"
+              alt="logo"
+              class="header__logo u-disable-select"
+            />
+          </a>
+
+          <!-- Menú móvil del header con los iconos de usuario, carrito y búsqueda -->
+          <div class="header__mb-personal">
+            <a href="#" class="header__mb-personal__icon-container">
+              <i class="fa-solid fa-user header__mb-personal__icon"></i>
+            </a>
+
+            <!-- El botón del carrito despliega el menú -->
+            <button class="js-cart-btn header__mb-personal__icon-container">
+              <i
+                class="fa-solid fa-cart-shopping header__mb-personal__icon"
+              ></i>
+              <span class="js-purchase-count header__mb-personal__info">0</span>
+            </button>
+
+            <a href="#" class="header__mb-personal__icon-container">
+              <i
+                class="fa-solid fa-magnifying-glass header__mb-personal__icon"
+              ></i>
+            </a>
+          </div>
+
+          <!-- Menú desktop del header -->
+          <div class="header__menu">
+            <!-- Parte superior del header con los menús de contactio y personal -->
+            <div class="header__top-menu">
+              <!-- Menú de contacto con el teléfono, móvil y un enlace a la página de contacto -->
+              <div class="header__contact__container">
+                <a href="#" class="header__contact__item">
+                  <i class="fa-solid fa-phone header__contact__icon"></i>
+                  <span class="header__contact__info">963 210 8852</span>
+                </a>
+
+                <a href="#" class="header__contact__item">
+                  <i class="fa-brands fa-whatsapp header__contact__icon"></i>
+                  <span class="header__contact__info">601 321 0885</span>
+                </a>
+
+                <a href="#" class="header__contact__item">
+                  <span class="header__contact__info">Contáctanos</span>
+                </a>
+              </div>
+
+              <!-- Menú personal desktop con los iconos de usuario, carrito y búsqueda -->
+              <div class="header__dk-personal__container">
+                <a href="#" class="header__dk-personal__icon-box">
+                  <i class="fa-solid fa-user header__dk-personal__icon"></i>
+                </a>
+
+                <button class="js-cart-btn header__dk-personal__icon-box">
+                  <i
+                    class="fa-solid fa-cart-shopping header__dk-personal__icon"
+                  >
+                  </i>
+                  <span class="js-purchase-count header__dk-personal__info"
+                    >0</span
+                  >
+                </button>
+
+                <a href="#" class="header__dk-personal__icon-box">
+                  <i
+                    class="fa-solid fa-magnifying-glass header__dk-personal__icon"
+                  >
+                  </i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Menú navegación desktop situado en la parte inferior del header -->
+            <nav class="dk-navigation">
+              <ul class="dk-navigation__list">
+                <li class="dk-navigation__item">
+                  <a href="#" class="dk-navigation__link">Diseña tu ramo</a>
+                </li>
+
+                <li class="dk-navigation__item">
+                  <a href="#" class="dk-navigation__link">Ocasiones</a>
+                </li>
+
+                <li class="dk-navigation__item">
+                  <a href="#" class="dk-navigation__link">Ramos de flores</a>
+                </li>
+
+                <li class="dk-navigation__item">
+                  <a href="#" class="dk-navigation__link">Centros de mesa</a>
+                </li>
+
+                <li class="dk-navigation__item">
+                  <a href="#" class="dk-navigation__link">Cestas de flores</a>
+                </li>
+
+                <li class="dk-navigation__item">
+                  <a href="#" class="dk-navigation__link">Complementos</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <!-- Main, la parte principal de una página web -->
+        <main class="main" id="main">
+          <!-- Sección «hero» aquí se muestra la cabecera de la página -->
+          <section class="hero">
+            <div class="hero__text-content">
+              <h1 class="heading-1">¡Disfruta este verano!</h1>
+              <h3 class="heading-3--sans u-color-white u-margin-top-xs">
+                Nuevas flores y grandes descuentos por <br />
+                <span class="u-extra-bold">tiempo limitado</span>
+              </h3>
+
+              <button class="cta-btn u-margin-top-xl">
+                <a href="#" class="cta-btn__link">Celebrar el verano »</a>
+              </button>
+            </div>
+          </section>
+
+          <!-- Sección de «Ramos destacados» mediante JavaScript se despliegan las cartas de cada ramo de flores -->
+          <section class="featured-bouquets u-margin-top-xl">
+            <h2 class="heading-2">Flores destacadas</h2>
+            <h3 class="heading-3--sans">Entrega garantizada en 24 horas</h3>
+
+            <!-- Aquí se renderizarán los distintos ramos de flores -->
+            <div class="u-margin-top-m" id="render-bouquets"></div>
+
+            <button class="cta-btn u-margin-top-xl">
+              <a href="#" class="cta-btn__link">Ver todos los ramos »</a>
+            </button>
+          </section>
+
+          <!-- Sección «Sobre nosotros», aquí se comenta un poco sobre la tienda -->
+          <section class="about-us u-margin-top-xl">
+            <h2 class="heading-2">¿Quiénes somos?</h2>
+
+            <div class="about-us__container u-margin-top-m">
+              <div class="about-us__image-container">
+                <img
+                  src="images/about-us/Floristeria.jpg"
+                  alt="La floristería"
+                  class="about-us__image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="about-us__text-container">
+                <h3 class="heading-3">
+                  Nada de floripondios, nuestros arreglos son de calidad
+                </h3>
+                <p class="paragraph u-margin-top-xs">
+                  Todos los arreglos florales que se muestran en la página web
+                  son auténticos. Han sido Realizados con mucho esmero por
+                  nuestros expertos floristas que han utilizado flores y plantas
+                  de alta calidad, además de poner mucha atención al detalle en
+                  la elaboración de la composición.
+                </p>
+
+                <h3 class="heading-3 u-margin-top-s">
+                  Los clientes son nuestro vergel
+                </h3>
+                <p class="paragraph u-margin-top-xs">
+                  De nada sirve un ramo de flores si éste llega en mal estado o
+                  tarde, por ello disponemos de un gran servicio de transporte
+                  que puede llegar en 24h a cualquier parte del país y en las
+                  mejores condiciones.
+                </p>
+              </div>
+            </div>
+
+            <button class="text-btn u-margin-top-xs">
+              <a href="#" class="text-btn__link">Saber más »</a>
+            </button>
+          </section>
+
+          <!-- Sección de «Ocasiones» aquí se muestran las distintas ocasiones para las que se han creado arreglos de flores -->
+          <section class="events u-margin-top-xl">
+            <h2 class="heading-2">
+              Flores para <br />
+              cualquier ocasión
+            </h2>
+
+            <div class="events__container u-margin-top-s">
+              <a href="#" class="events__box">
+                <i class="fa-solid fa-ring events__icon"></i>
+                <span class="events__content">Bodas</span>
+                <i class="fa-solid fa-angles-right events__arrow"></i>
+              </a>
+
+              <a href="#" class="events__box">
+                <i class="fa-solid fa-baby events__icon"></i>
+                <span class="events__content">Nacimientos</span>
+                <i class="fa-solid fa-angles-right events__arrow"></i>
+              </a>
+
+              <a href="#" class="events__box">
+                <i class="fa-solid fa-cake-candles events__icon"></i>
+                <span class="events__content">Cumpleaños</span>
+                <i class="fa-solid fa-angles-right events__arrow"></i>
+              </a>
+
+              <a href="#" class="events__box">
+                <i class="fa-solid fa-heart-crack events__icon"></i>
+                <span class="events__content">Pedir perdón</span>
+                <i class="fa-solid fa-angles-right events__arrow"></i>
+              </a>
+
+              <a href="#" class="events__box">
+                <i class="fa-regular fa-face-kiss-wink-heart events__icon"></i>
+                <span class="events__content">Amor</span>
+                <i class="fa-solid fa-angles-right events__arrow"></i>
+              </a>
+
+              <a href="#" class="events__box">
+                <i class="fa-solid fa-cross events__icon"></i>
+                <span class="events__content">Funerales</span>
+                <i class="fa-solid fa-angles-right events__arrow"></i>
+              </a>
+
+              <a href="#" class="events__box">
+                <i class="fa-solid fa-user-injured events__icon"></i>
+                <span class="events__content">Mejórate</span>
+                <i class="fa-solid fa-angles-right events__arrow"></i>
+              </a>
+            </div>
+
+            <button class="cta-btn u-margin-top-l">
+              <a href="#" class="cta-btn__link">Ver todas las ocasiones »</a>
+            </button>
+          </section>
+
+          <!-- Sección de «Características», aquí se muestran 4 cualidades de la tienda -->
+          <section class="features u-margin-top-xl">
+            <h2 class="heading-2">
+              ¿Por qué elegir <br />
+              la Floroteca?
+            </h2>
+
+            <div class="features__container u-margin-top-s">
+              <div class="features__card">
+                <i class="fa-regular fa-clock features__icon"></i>
+                <h3 class="heading-3--sans u-margin-top-s">Experiencia</h3>
+                <p class="paragraph u-margin-top-s">
+                  Llevamos más de 10 años en el arte de los arreglos florales
+                  artesanales. Ponemos máxima atención para garantizar una mayor
+                  satisfacción.
+                </p>
+              </div>
+
+              <div class="features__card">
+                <i class="fa-solid fa-truck features__icon"></i>
+                <h3 class="heading-3--sans u-margin-top-s">Entrega en 24h</h3>
+                <p class="paragraph u-margin-top-s">
+                  Nos comprometemos a entregar los pedidos en un plazo máximo de
+                  24h, siempre poniendo énfasis en que la entrega llegue en el
+                  mejor estado posible.
+                </p>
+              </div>
+
+              <div class="features__card">
+                <i class="fa-regular fa-calendar-days features__icon"></i>
+                <h3 class="heading-3--sans u-margin-top-s">Elige una fecha</h3>
+                <p class="paragraph u-margin-top-s">
+                  Puedes realizar tu pedido con la antelación que desees.
+                  ¡Avísanos lo antes posible e iremos prefeccionando tu regalo
+                  hasta que se ajuste a tu gusto!
+                </p>
+              </div>
+
+              <div class="features__card">
+                <i class="fa-solid fa-certificate features__icon"></i>
+                <h3 class="heading-3--sans u-margin-top-s">Alta calidad</h3>
+                <p class="paragraph u-margin-top-s">
+                  Nuestros productos son de alta calidad. Nuestros floricultores
+                  le dedican máxima atención en todo el proceso, desde el
+                  cultivo hasta el envío.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Sección de «Centros de mesa destacados», aquí se muestran los mejores centros de mesa disponibles en tienda -->
+          <section class="featured-centerpieces u-margin-top-xl">
+            <h2 class="heading-2">
+              Nuestros mejores <br />
+              centros de mesa
+            </h2>
+
+            <!-- Los centros de mesa se renderizan aquí mediante cógido JS -->
+            <div class="u-margin-top-m" id="render-centerpieces"></div>
+
+            <button class="cta-btn u-margin-top-l">
+              <a href="#" class="cta-btn__link"
+                >Ver todos los centros de mesa »</a
+              >
+            </button>
+          </section>
+
+          <!-- Sección «Cestas de flores destacadas» -->
+          <section class="featured-flowerbaskets u-margin-top-xl">
+            <h2 class="heading-2">
+              Regala fantásticas <br />
+              cestas de flores
+            </h2>
+
+            <!-- Mediante código JavaScript, las distintas cestas de flores se renderizarán aquí -->
+            <div class="u-margin-top-m" id="render-flowerbaskests"></div>
+
+            <button class="cta-btn u-margin-top-l">
+              <a href="#" class="cta-btn__link">
+                Ver todas las cestas de flores »
+              </a>
+            </button>
+          </section>
+
+          <!-- Sección «Novedades», aquí se muestran las últimas noticias del blog -->
+          <section class="blog-news u-margin-top-xl">
+            <h2 class="heading-2 u-margin-top-m">
+              ¿Qué novedades hay <br />
+              en nuestro blog?
+            </h2>
+
+            <div class="blog-news__container u-margin-top-m">
+              <a href="#" class="blog-news__card">
+                <div class="blog-news__image-container">
+                  <img
+                    src="images/blog-news/noticia-1.jpg"
+                    alt="Ideas de arreglos florales para bodas"
+                    class="blog-news__image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="blog-news__text-container">
+                  <h3 class="heading-3">
+                    ¿Planeas una boda? 12 ideas florales con las que trinfurarás
+                    en tu evento soñado
+                  </h3>
+                  <p class="paragraph u-margin-top-s">
+                    Una boda supone una celebración en la que no se puede
+                    descuidar la decoración. ¿Necesitas ideas para darle un
+                    toque único a esta ocasión? ¡Aquí te proponemos 12 ideas
+                    fáciles de hacer y baratas que seguro te encandilarán!
+                  </p>
+                </div>
+              </a>
+
+              <a href="#" class="blog-news__card">
+                <div class="blog-news__image-container">
+                  <img
+                    src="images/blog-news/noticia-2.jpg"
+                    alt="Ideas de regalos para el día de la madre"
+                    class="blog-news__image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="blog-news__text-container">
+                  <h3 class="heading-3">
+                    7 posibles regalos para dar este Día de la madre que seguro
+                    le encantarán.
+                  </h3>
+                  <p class="paragraph u-margin-top-s">
+                    Se acerca el Día de la madre y es la ocasión perfecta para
+                    recordarle lo mucho que la quieres con un bonito detalle.
+                    Con estas ideas, de regalos caseros demuestra que le has
+                    dedicado tiempo y has pensado en ella.
+                  </p>
+                </div>
+              </a>
+
+              <a href="#" class="blog-news__card">
+                <div class="blog-news__image-container">
+                  <img
+                    src="images/blog-news/noticia-3.jpg"
+                    alt="Curiosidades acerca del lirio de araña rojo"
+                    class="blog-news__image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="blog-news__text-container">
+                  <h3 class="heading-3">
+                    El lirio de araña rojo, bajo su llamativa apariencia, trae
+                    consigo un aciago recuerdo.
+                  </h3>
+                  <p class="paragraph u-margin-top-s">
+                    ¿Por qué esta flor no se recomienda regalarla como ramo de
+                    flores? Esta insólita planta de un color rojo vivaz suele
+                    brotar durante las fechas cercanas al equinocio otoñal. En
+                    Japón guarda un significado muy profundo.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <button class="btn u-margin-top-l">
+              <a href="#" class="btn__link">Ver todas las noticias »</a>
+            </button>
+          </section>
+
+          <!-- Sección «Complementos», aquí se muestran otra clase de artículos que se pueden adquirir junto con los arreglos florales -->
+          <section class="complements u-margin-top-xl">
+            <h2 class="heading-2">
+              Añádele un capricho <br />
+              a tus pedidos
+            </h2>
+
+            <div class="card-container u-margin-top-m">
+              <a href="#" class="card card--3-col">
+                <div class="card__image-container">
+                  <img
+                    src="images/complements/plushies/osito-de-peluche.jpg"
+                    alt=""
+                    class="card__image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="card__body">
+                  <h3 class="heading-3 u-margin-top-xs">Peluches</h3>
+                </div>
+              </a>
+
+              <a href="#" class="card card--3-col">
+                <div class="card__image-container">
+                  <img
+                    src="images/complements/fruitbaskets/bocado-carnoso.jpg"
+                    alt=""
+                    class="card__image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="card__body">
+                  <h3 class="heading-3 u-margin-top-xs">Cestas de frutas</h3>
+                </div>
+              </a>
+
+              <a href="#" class="card card--3-col">
+                <div class="card__image-container">
+                  <img
+                    src="images/complements/chocolates/Chococorazones.jpg"
+                    alt=""
+                    class="card__image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="card__body">
+                  <h3 class="heading-3 u-margin-top-xs">Bombones</h3>
+                </div>
+              </a>
+
+              <a href="#" class="card card--3-col">
+                <div class="card__image-container">
+                  <img
+                    src="images/complements/sweets/brocheta-dulzona.jpg"
+                    alt=""
+                    class="card__image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="card__body">
+                  <h3 class="heading-3 u-margin-top-xs">Dulces</h3>
+                </div>
+              </a>
+
+              <a href="#" class="card card--3-col">
+                <div class="card__image-container">
+                  <img
+                    src="images/complements/vases/jarron-oriental.jpg"
+                    alt=""
+                    class="card__image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="card__body">
+                  <h3 class="heading-3 u-margin-top-xs">Jarrones</h3>
+                </div>
+              </a>
+
+              <a href="#" class="card card--3-col">
+                <div class="card__image-container">
+                  <img
+                    src="images/complements/wines/rasteau.jpg"
+                    alt=""
+                    class="card__image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="card__body">
+                  <h3 class="heading-3 u-margin-top-xs">Vinos y licores</h3>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <!-- Sección de «reseñas», aquí se muestran opiniones vertidas por distintos usuarios en internet -->
+          <section class="reviews u-margin-top-xl">
+            <h2 class="heading-2">
+              Lo que opinan <br />
+              nuestros clientes
+            </h2>
+
+            <!-- Contenedor de todas las reseñas -->
+            <div class="reviews__container u-margin-top-s">
+              <!-- Carta de reseña individual -->
+              <article class="reviews__card">
+                <!-- Cabecera de la reseña, contiene la imagen de usuario, el nombre, la puntuación y en enlace donde realizó su crítica -->
+                <div class="reviews__card-header">
+                  <div class="reviews__card-header__user">
+                    <!-- Imagen del usuario -->
+                    <div class="reviews__card-header__img-container">
+                      <img
+                        src="images/reviews/critico-1.jpg"
+                        alt="crítico 1"
+                        class="reviews__card-header__img"
+                        loading="lazy"
+                      />
+                    </div>
+                    <!-- Nombre de usuario -->
+                    <h4 class="heading-4 u-bold">Lontano</h4>
+                  </div>
+                  <!-- Contenedor del enlace y de la puntuación -->
+                  <div
+                    class="reviews__card-header__link-rate-container u-margin-top-xs"
+                  >
+                    <!-- Contenedor de las cinco estrellas que conforman la puntuación -->
+                    <div class="reviews__card-header__rate-container">
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                    </div>
+                    <!-- Enlace donde se realizó la crítica -->
+                    <a href="#" class="reviews__card-header__link"
+                      >@tripadvisor</a
+                    >
+                  </div>
+                </div>
+
+                <div class="reviews__card-body">
+                  <h5 class="heading-5">05/07/2023</h5>
+                  <h3 class="heading-3--sans">¡Superó mis expectativas!</h3>
+                  <p class="paragraph u-margin-top-xs">
+                    No conocía la floristería y me sorprendió para bien. Le
+                    llevé la cesta de flores a un familiar enfermo y le encantó.
+                    Seguiré confiando en esta empresa para futuros pedidos.
+                  </p>
+                </div>
+              </article>
+
+              <article class="reviews__card">
+                <div class="reviews__card-header">
+                  <div class="reviews__card-header__user">
+                    <div class="reviews__card-header__img-container">
+                      <img
+                        src="images/reviews/critico-2.jpg"
+                        alt="crítico 2"
+                        class="reviews__card-header__img"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h4 class="heading-4 u-bold">Pick_A_Peck</h4>
+                  </div>
+                  <div
+                    class="reviews__card-header__link-rate-container u-margin-top-xs"
+                  >
+                    <div class="reviews__card-header__rate-container">
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--empty"></div>
+                    </div>
+                    <a href="#" class="reviews__card-header__link">@ekomi</a>
+                  </div>
+                </div>
+
+                <div class="reviews__card-body">
+                  <h5 class="heading-5">30/06/2023</h5>
+                  <h3 class="heading-3--sans">Esperaba más</h3>
+                  <p class="paragraph u-margin-top-xs">
+                    Pedí un ramo de flores acompañado de unos caramelos como
+                    complemento. Pues sólo me dieron una brocheta dulce. Creo
+                    que eso deberían aclararlo. Por todo lo demás no tengo
+                    queja.
+                  </p>
+                </div>
+              </article>
+
+              <article class="reviews__card">
+                <div class="reviews__card-header">
+                  <div class="reviews__card-header__user">
+                    <div class="reviews__card-header__img-container">
+                      <img
+                        src="images/reviews/critico-3.jpg"
+                        alt="crítico 3"
+                        class="reviews__card-header__img"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h4 class="heading-4 u-bold">P1t1m1n1</h4>
+                  </div>
+                  <div
+                    class="reviews__card-header__link-rate-container u-margin-top-xs"
+                  >
+                    <div class="reviews__card-header__rate-container">
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                      <div class="reviews__card-header__star--fill"></div>
+                    </div>
+                    <a href="#" class="reviews__card-header__link">@google</a>
+                  </div>
+                </div>
+
+                <div class="reviews__card-body">
+                  <h5 class="heading-5">27/06/2023</h5>
+                  <h3 class="heading-3--sans">Mi floristería de confianza</h3>
+                  <p class="paragraph u-margin-top-xs">
+                    Siempre que necesito un ramo o una cesta recurro a este
+                    sitio. Las flores siempre están bien frescas y muy bonitas,
+                    tal y como se ve en las fotos de la página web. Todos muy
+                    profesionales.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Sección «Ramo Personalizado», aquí se avisa de que el usuario puede crear un ramo de flores a su medida -->
+          <section class="custom-bouquet">
+            <h2 class="heading-2 u-margin-top-l">
+              ¡Diseña tu propio <br />
+              ramo de flores!
+            </h2>
+
+            <div class="custom-bouquet__container u-margin-top-m">
+              <div class="custom-bouquet__image-container">
+                <img
+                  src="images/custom-bouquet/personaliza-tu-ramo.jpg"
+                  alt="personaliza tu ramo"
+                  class="custom-bouquet__image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="custom-bouquet__text-container">
+                <h3 class="heading-3">
+                  Crea un ramo a tu gusto, que se ajuste a tu estilo
+                </h3>
+                <p class="paragraph u-margin-top-xs">
+                  Aquí en la floroteca puedes crear un ramo de flores a tu
+                  gusto. Si tienes en mente alguna composición, ¡saca a relucir
+                  tu creatividad y haz un arreglo propio!
+                </p>
+
+                <p class="paragraph u-margin-top-xs">
+                  Escoge entre los jarrones o cestas disponibles, añade las
+                  flores que más te gusten y adereza la composición con las
+                  plantas que prefieras.
+                </p>
+
+                <p class="paragraph u-margin-top-xs">
+                  No hay mejor regalo que un ramo de flores hecho por tí mismo
+                  para que la otra persona se sienta especial.
+                </p>
+              </div>
+            </div>
+
+            <button class="cta-btn u-margin-top-l">
+              <a href="#" class="cta-btn__link"> Crear ramo personalizado » </a>
+            </button>
+          </section>
+
+          <!-- Sección «Galería», aquí se muestran varias imágenes de distintos arreglos florales -->
+          <section class="gallery u-margin-top-xl">
+            <h2 class="heading-2">
+              La Floroteca <br />
+              en imágenes
+            </h2>
+
+            <h3 class="heading-3--sans u-margin-top-s">
+              Síguenos en <a href="#" class="gallery__text-link">Instagram</a> y
+              <br />
+              etiquétanos con #YoDisfrutoConLaFloroteca
+            </h3>
+
+            <div class="gallery__container u-margin-top-s">
+              <div class="gallery__image-box gallery__image-box--1">
+                <img
+                  src="images/gallery/image-1.jpg"
+                  alt="anillo de compromiso"
+                  class="gallery__image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="gallery__image-box gallery__image-box--2">
+                <img
+                  src="images/gallery/image-2.jpg"
+                  alt="cesta de rosas"
+                  class="gallery__image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="gallery__image-box gallery__image-box--3">
+                <img
+                  src="images/gallery/image-3.jpg"
+                  alt="cesta de rosas"
+                  class="gallery__image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="gallery__image-box gallery__image-box--4">
+                <img
+                  src="images/gallery/image-4.jpg"
+                  alt="flores coloridas"
+                  class="gallery__image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="gallery__image-box gallery__image-box--5">
+                <img
+                  src="images/gallery/image-5.jpg"
+                  alt="campo vasto de flores"
+                  class="gallery__image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="gallery__image-box gallery__image-box--6">
+                <img
+                  src="images/gallery/image-6.jpg"
+                  alt="centro de mesa"
+                  class="gallery__image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="gallery__image-box gallery__image-box--7">
+                <img
+                  src="images/gallery/image-7.jpg"
+                  alt="jarrón de rosas"
+                  class="gallery__image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="gallery__image-box gallery__image-box--8">
+                <img
+                  src="images/gallery/image-8.jpg"
+                  alt="ramo de rosas nítidas"
+                  class="gallery__image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="gallery__image-box gallery__image-box--9">
+                <img
+                  src="images/gallery/image-9.jpg"
+                  alt="jarrón de tulipanes rojos"
+                  class="gallery__image"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <button class="btn u-margin-top-l">
+              <a href="#" class="btn__link">
+                <i class="fa-brands fa-instagram btn__icon"></i>
+                Síguenos en Instagram »
+              </a>
+            </button>
+          </section>
+
+          <!-- Sección «Newsletter», aquí se encuentra un formulario para suscribirse a una newlstetter -->
+          <section class="newsletter u-margin-top-xl">
+            <h2 class="heading-2 u-color-white">
+              ¡Apúntate a <br />
+              nuestra newsletter!
+            </h2>
+            <div class="newsletter__container u-margin-top-m">
+              <div class="newsletter__image">
+                <h3 class="heading-3 newsletter__image__heading">
+                  Entérate de todas las novedades, además de recibir descuentos
+                  y ventajas exclusivas.
+                </h3>
+              </div>
+
+              <div class="newsletter__card">
+                <h3 class="heading-3 newsletter__card__heading">
+                  Entérate de todas las novedades, además de recibir descuentos
+                  y ventajas exclusivas.
+                </h3>
+
+                <form action="#" action="POST" class="form u-margin-top-s">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form__input"
+                    id="name"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    class="form__input"
+                    id="email"
+                    placeholder="Deja aquí tu mail"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    id="submit"
+                    class="cta-btn--form u-margin-top-s"
+                  >
+                    <span class="cta-btn__link">Unirse »</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- El Footer de la página web -->
+        <footer class="footer">
+          <!-- Este «div» contiene toda la parte superior del footer -->
+          <div class="footer__container">
+            <!-- Logo del footer de la página web -->
+            <a href="#" class="footer__logo-container">
+              <img
+                src="images/system/logo.svg"
+                alt="logo"
+                class="footer__logo u-disable-select"
+                loading="lazy"
+              />
+            </a>
+
+            <!-- Contenedor de todos los bloques que contienen enlaces -->
+            <div class="footer__section-container">
+              <div class="footer__section">
+                <h3 class="heading-3--sans u-color-white u-extra-bold">
+                  Información
+                </h3>
+                <a href="#" class="footer__content">Sobre nosotros</a>
+                <a href="#" class="footer__content">Métodos de pago</a>
+                <a href="#" class="footer__content">Blog</a>
+              </div>
+
+              <div class="footer__section">
+                <h3 class="heading-3--sans u-color-white u-extra-bold">
+                  Contacto
+                </h3>
+                <a href="#" class="footer__content">Tel.: 963 210 8852</a>
+                <a href="#" class="footer__content">Móv.: 601 321 0885</a>
+                <a href="#" class="footer__content">
+                  Email: contacto@lafloroteca.es
+                </a>
+              </div>
+
+              <div class="footer__section">
+                <h3 class="heading-3--sans u-color-white u-extra-bold">
+                  Políticas
+                </h3>
+                <a href="#" class="footer__content">Aviso legal</a>
+                <a href="#" class="footer__content">Política de cookies</a>
+                <a href="#" class="footer__content">Política de devoluciones</a>
+              </div>
+
+              <div class="footer__section">
+                <h3 class="heading-3--sans u-color-white u-extra-bold">
+                  ¿Dudas?
+                </h3>
+                <a href="#" class="footer__content">Preguntas frecuentes</a>
+              </div>
+
+              <div class="footer__section">
+                <h3 class="heading-3--sans u-color-white u-extra-bold">
+                  Horario de contacto
+                </h3>
+                <p class="footer__content">Lunes a viernes: de 10h a 18h</p>
+                <p class="footer__content">
+                  Sábados, domingos y festivos: cerrados
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contenedor de las redes sociales -->
+          <div class="footer__social u-margin-top-l">
+            <h3 class="heading-3--sans u-color-white u-extra-bold">
+              Síguenos:
+            </h3>
+            <div class="social__container--footer">
+              <a href="#" class="social__link--footer">
+                <i class="fa-brands fa-instagram social__icon--footer"></i>
+              </a>
+
+              <a href="#" class="social__link--footer">
+                <i class="fa-brands fa-facebook social__icon--footer"></i>
+              </a>
+
+              <a href="#" class="social__link--footer">
+                <i class="fa-brands fa-twitter social__icon--footer"></i>
+              </a>
+
+              <a href="#" class="social__link--footer">
+                <i class="fa-brands fa-pinterest social__icon--footer"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Línea divisoria -->
+          <div class="line-break--footer u-margin-top-m"></div>
+
+          <!-- Texto de copyright de la página web, así como su desarrollador -->
+          <span class="footer__disclaimer u-margin-top-xs">
+            © 2024 - La Floroteca | Todos los derechos reservados | Creada con
+            <i class="fa-solid fa-heart footer__disclaimer__icon"></i> por José
+            Senent
+          </span>
+        </footer>
+
+        <script type="module" src="javascript/script.js"></script>
+        <!-- <a href="https://www.flaticon.com/free-icons/vase" title="vase icons">Vase icons created by Smashicons - Flaticon</a> -->
+        <!-- <a href="https://www.freepik.com/free-photo/colorful-marmalades-sticks-glass-jar_11367673.htm">Image by azerbaijan_stockers</a> on Freepik -->
+      </body>
+    </html>
+  </body>
+</html>
