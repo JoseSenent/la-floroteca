@@ -563,6 +563,10 @@
     var(--main-color)
   );
 
+  &__image {
+    display: none;
+  }
+
   @include responsive(desktop) {
     padding: var(--bg-size);
   }
@@ -606,8 +610,6 @@
 
     // La imagen no se muestra en pantallas pequeñas
     &__image {
-      display: none;
-
       // Imagen que acompaña el formulario de la newsletter
       @include responsive(tab-land) {
         padding: 3rem;

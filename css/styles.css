@@ -1573,6 +1573,9 @@ body {
   padding: var(--md-size);
   background-image: linear-gradient(135deg, var(--lightgreen), var(--main-color));
 }
+.newsletter__image {
+  display: none;
+}
 @media only screen and (min-width: 75em) {
   .newsletter {
     padding: var(--bg-size);
@@ -1612,11 +1615,6 @@ body {
 @media only screen and (min-width: 56.25em) and (min-width: 75em) {
   .newsletter__container {
     height: 35rem;
-  }
-}
-@media only screen and (min-width: 56.25em) {
-  .newsletter__image {
-    display: none;
   }
 }
 @media only screen and (min-width: 56.25em) and (min-width: 56.25em) {
