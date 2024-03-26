@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass sass/main.scss css/styles.css -w",
+    "watch:typescript": "tsc -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "sass sass/main.scss css/styles.comp.css",

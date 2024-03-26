@@ -30,12 +30,14 @@ $bgMenu.addEventListener("click", () => {
 // Abre el menú del carrito al hacer clic en el propio icono
 $cartBtn.forEach((cartBtnEl) => cartBtnEl.addEventListener("click", () => {
     $cartMenu.classList.add("is-open");
-    $main.classList.remove("is-open");
+    $main.classList.add("is-open");
 }));
 // Cierra el menú de carrito al hacer clic en la «X» o en el botón de «Seguir comprando»
 $closeCartBtn.forEach((closeCartBtnEl) => closeCartBtnEl.addEventListener("click", () => {
     $cartMenu.classList.remove("is-open");
     $main.classList.remove("is-open");
+    $bgMenuIcon.classList.remove("is-open");
+    $navMenu.classList.remove("is-open");
 }));
 // Crea un arreglo con los productos pertenecientes a la categoría establecida en los parámetros de la función
 function getCategoryProducts(products, category) {
@@ -212,7 +214,6 @@ for (let i = 0; i < $addToCartBtn.length; i++) {
         const element = e.target;
         // Declaramos una variable que guarda la id del producto
         const productIndex = element.getAttribute("data-product-index");
-        console.log(productIndex);
         // Para saber el lugar del arreglo donde está el producto, restamos 1 a la id, ya que los arreglos comienzan en el índice en 0
         const productPurchased = dataProducts[Number(productIndex) - 1];
         // Verificamos si el arreglo «cart» tiene ese producto ya incluido

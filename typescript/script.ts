@@ -52,7 +52,7 @@ $bgMenu.addEventListener("click", () => {
 $cartBtn.forEach((cartBtnEl) =>
   cartBtnEl.addEventListener("click", () => {
     $cartMenu.classList.add("is-open");
-    $main.classList.remove("is-open");
+    $main.classList.add("is-open");
   })
 );
 
@@ -61,6 +61,9 @@ $closeCartBtn.forEach((closeCartBtnEl) =>
   closeCartBtnEl.addEventListener("click", () => {
     $cartMenu.classList.remove("is-open");
     $main.classList.remove("is-open");
+
+    $bgMenuIcon.classList.remove("is-open");
+    $navMenu.classList.remove("is-open");
   })
 );
 
@@ -285,7 +288,6 @@ for (let i = 0; i < $addToCartBtn.length; i++) {
     const element = e.target as HTMLButtonElement;
     // Declaramos una variable que guarda la id del producto
     const productIndex = element.getAttribute("data-product-index");
-    console.log(productIndex);
 
     // Para saber el lugar del arreglo donde está el producto, restamos 1 a la id, ya que los arreglos comienzan en el índice en 0
     const productPurchased = dataProducts[Number(productIndex) - 1];
