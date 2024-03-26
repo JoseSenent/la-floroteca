@@ -31,13 +31,13 @@ $bgMenu.addEventListener("click", () => {
 $cartBtn.forEach((cartBtnEl) => cartBtnEl.addEventListener("click", () => {
     $cartMenu.classList.add("is-open");
     $main.classList.add("is-open");
+    $bgMenuIcon.classList.remove("is-open");
+    $navMenu.classList.remove("is-open");
 }));
 // Cierra el menú de carrito al hacer clic en la «X» o en el botón de «Seguir comprando»
 $closeCartBtn.forEach((closeCartBtnEl) => closeCartBtnEl.addEventListener("click", () => {
     $cartMenu.classList.remove("is-open");
     $main.classList.remove("is-open");
-    $bgMenuIcon.classList.remove("is-open");
-    $navMenu.classList.remove("is-open");
 }));
 // Crea un arreglo con los productos pertenecientes a la categoría establecida en los parámetros de la función
 function getCategoryProducts(products, category) {

@@ -53,6 +53,9 @@ $cartBtn.forEach((cartBtnEl) =>
   cartBtnEl.addEventListener("click", () => {
     $cartMenu.classList.add("is-open");
     $main.classList.add("is-open");
+
+    $bgMenuIcon.classList.remove("is-open");
+    $navMenu.classList.remove("is-open");
   })
 );
 
@@ -61,9 +64,6 @@ $closeCartBtn.forEach((closeCartBtnEl) =>
   closeCartBtnEl.addEventListener("click", () => {
     $cartMenu.classList.remove("is-open");
     $main.classList.remove("is-open");
-
-    $bgMenuIcon.classList.remove("is-open");
-    $navMenu.classList.remove("is-open");
   })
 );
 
