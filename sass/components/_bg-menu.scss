@@ -41,24 +41,24 @@
       left: 0;
     }
 
+    &.is-open::before {
+      z-index: 100;
+      top: 0;
+      transform: rotate(225deg);
+    }
+
     &::before {
       top: -1rem;
+    }
 
-      &.is-open {
-        z-index: 100;
-        top: 0;
-        transform: rotate(225deg);
-      }
+    &.is-open::after {
+      z-index: 100;
+      top: 0;
+      transform: rotate(-225deg);
     }
 
     &::after {
       top: 1rem;
-
-      &.is-open {
-        z-index: 100;
-        top: 0;
-        transform: rotate(-225deg);
-      }
     }
   }
 }

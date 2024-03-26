@@ -332,21 +332,21 @@ body {
   position: absolute;
   left: 0;
 }
-.bg-menu__icon::before {
-  top: -1rem;
-}
-.bg-menu__icon::before.is-open {
+.bg-menu__icon.is-open::before {
   z-index: 100;
   top: 0;
   transform: rotate(225deg);
 }
-.bg-menu__icon::after {
-  top: 1rem;
+.bg-menu__icon::before {
+  top: -1rem;
 }
-.bg-menu__icon::after.is-open {
+.bg-menu__icon.is-open::after {
   z-index: 100;
   top: 0;
   transform: rotate(-225deg);
+}
+.bg-menu__icon::after {
+  top: 1rem;
 }
 
 .delete-btn {
