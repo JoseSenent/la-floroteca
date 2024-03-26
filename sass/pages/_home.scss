@@ -70,6 +70,15 @@
 
   @include responsive(desktop) {
     padding: var(--md-size) 7rem;
+
+    // Contenedor que engloba tanto la imagen como el texto
+    &__container {
+      @include flex(row-reverse, nowrap, center, initial, 3rem);
+    }
+
+    &__text-container {
+      margin-top: 0;
+    }
   }
 
   // Imagen de la sección
@@ -84,15 +93,6 @@
 
   &__text-container {
     margin-top: var(--sm-size);
-  }
-
-  // Contenedor que engloba tanto la imagen como el texto
-  &__container {
-    @include flex(row-reverse, nowrap, center, initial, 3rem);
-  }
-
-  &__text-container {
-    margin-top: 0;
   }
 }
 

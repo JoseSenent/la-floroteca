@@ -1108,6 +1108,17 @@ body {
   .about-us {
     padding: var(--md-size) 7rem;
   }
+  .about-us__container {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: initial;
+    gap: 3rem;
+  }
+  .about-us__text-container {
+    margin-top: 0;
+  }
 }
 .about-us__image {
   border: 2px solid var(--main-color);
@@ -1120,17 +1131,6 @@ body {
 }
 .about-us__text-container {
   margin-top: var(--sm-size);
-}
-.about-us__container {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: initial;
-  gap: 3rem;
-}
-.about-us__text-container {
-  margin-top: 0;
 }
 
 .events {
